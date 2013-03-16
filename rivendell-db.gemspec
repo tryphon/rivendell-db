@@ -22,6 +22,7 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency 'dm-serializer'
   gem.add_runtime_dependency 'dm-types'
   gem.add_runtime_dependency 'dm-validations'
+  gem.add_runtime_dependency 'rivendell-db'
 
   gem.add_development_dependency "simplecov"
   gem.add_development_dependency "rspec"
