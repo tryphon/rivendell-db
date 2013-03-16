@@ -29,4 +29,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "guard-rspec"
   gem.add_development_dependency "rake"
   gem.add_development_dependency "dm-transactions"
+  gem.add_development_dependency "rdoc"
 end
