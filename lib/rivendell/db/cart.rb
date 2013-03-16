@@ -15,8 +15,6 @@ class Rivendell::DB::Cart
   belongs_to :group, :child_key => [ :group_name ], :parent_key => [ :name ]
   has n, :cuts, :child_key => [ :cart_number ], :parent_key => [ :number ]
 
-  belongs_to :last_cut_played, 'Rivendell::DB::Cut', :child_key => [  :last_cut_played ], :parent_key => [ :cut_name ]
-
   before :valid?, :use_free_number
 
   def use_free_number(context = :default)
