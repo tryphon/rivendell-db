@@ -6,11 +6,11 @@ require 'rivendell/db/version'
 Gem::Specification.new do |gem|
   gem.name          = "rivendell-db"
   gem.version       = Rivendell::DB::VERSION
-  gem.authors       = ["Alban Peignier"]
-  gem.email         = ["alban@tryphon.eu"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.authors       = ["Alban Peignier", "Florent Peyraud"]
+  gem.email         = ["alban@tryphon.eu", "florent@tryphon.eu"]
+  gem.description   = %q{Rivendell database mapping}
+  gem.summary       = %q{Access to Rivendell database}
+  gem.homepage      = "http://projects.tryphon.eu/projects/rivendell-db"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
