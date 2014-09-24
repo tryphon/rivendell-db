@@ -1,15 +1,15 @@
 namespace :db do
 
   def mysql_execute(database, command)
-    system "echo \"#{command}\" | sudo -H mysql #{database}"
+    system "echo \"#{command}\" | mysql #{database}"
   end
 
   def mysql_load(database, file)
-    system "sudo -H mysql #{database} < #{file}"
+    system "mysql #{database} < #{file}"
   end
 
   def mysql_admin(*args)
-    system "sudo -H mysqladmin #{args.join(' ')}"
+    system "mysqladmin #{args.join(' ')}"
   end
 
   namespace :test do
