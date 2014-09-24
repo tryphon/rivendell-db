@@ -31,4 +31,23 @@ class Rivendell::DB::Cart
       { :numbers => numbers, :fields => field_values }
     end
   end
+
+  property :sched_codes, String
+
+  def scheduler_codes
+    if sched_codes
+      sched_codes.scan(/.{11}/).map(&:strip)
+    else
+      []
+    end
+  end
+
+  def scheduler_codes=(scheduler_codes)
+    self.sched_codes =
+      if scheduler_codes and !scheduler_codes.empty?
+        scheduler_codes.uniq.sort.map { |c| c.ljust(11) }.join + "."
+      else
+        ""
+      end
+  end
 end
