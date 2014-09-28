@@ -18,7 +18,7 @@ class Rivendell::DB::Cart
   before :valid?, :use_free_number
 
   def use_free_number(context = :default)
-    self.number = group.free_cart_number if group
+    self.number ||= group.free_cart_number if group
   end
 
   def self.duplicated(*fields)
