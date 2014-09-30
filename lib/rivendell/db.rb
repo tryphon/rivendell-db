@@ -19,9 +19,9 @@ module Rivendell
     def self.default_url
       if mysql_conf
         # If we can, pull the config from Rivendell's own configuration.
-        "mysql://#{mysql_conf['Loginname']}:#{mysql_conf['Password']}@#{mysql_conf['Hostname']}/#{mysql_conf['Database']}"
+        "mysql://#{mysql_conf['Loginname']}:#{mysql_conf['Password']}@#{mysql_conf['Hostname']}/#{mysql_conf['Database']}?reconnect=true"
       else
-        'mysql://rduser:letmein@localhost/Rivendell'
+        'mysql://rduser:letmein@localhost/Rivendell?reconnect=true'
       end
     end
 
