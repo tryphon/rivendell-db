@@ -44,6 +44,7 @@ require 'rivendell/db/cut'
 require 'rivendell/db/cart'
 require 'rivendell/db/dropbox'
 require 'rivendell/db/group'
+require 'rivendell/db/scheduler_code'
 # require 'rivendell/task'
 # require 'rivendell/tools'
 

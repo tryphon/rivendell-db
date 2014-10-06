@@ -50,4 +50,9 @@ class Rivendell::DB::Cart
         ""
       end
   end
+
+  def self.scheduler_code(scheduler_code)
+    all('sched_codes.like' => "%#{scheduler_code.ljust(11)}%")
+  end
+  
 end
